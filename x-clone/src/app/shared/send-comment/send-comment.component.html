@@ -1,0 +1,10 @@
+<div class="tweet-form">
+  <form (ngSubmit)="sendComment()">
+    <mat-form-field appearance="fill" class="tweet-input">
+      <mat-label>Make a comment</mat-label>
+      <input matInput [(ngModel)]="commentText" name="tweetText">
+    </mat-form-field>
+    <button mat-raised-button color="black" type="submit" class="tweet-button">Comment</button>
+  </form>
+</div>
+

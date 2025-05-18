@@ -1,0 +1,70 @@
+/* send-tweet.component.css */
+.tweet-form {
+  max-width: 500px;
+  margin: auto;
+  border: 2px solid #484848;
+  padding: 20px;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.tweet-input {
+  width: 100%;
+  margin-bottom: 16px; /* Spacing between input and button */
+  background: #000 !important;
+  color: #e6e6e6 !important;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.tweet-button {
+  border-radius: 20px;
+  background: #111 !important;
+  color: #e6e6e6 !important;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.tweet-form-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tweet-avatar {
+  margin-right: 12px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet-avatar mat-icon {
+  font-size: 48px;
+  color: #e3e3e3;
+  background: #111 !important;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Make the entire Material form field and input area black
+::ng-deep .tweet-input .mat-mdc-text-field-wrapper,
+::ng-deep .tweet-input .mdc-text-field--filled,
+::ng-deep .tweet-input .mat-mdc-form-field-flex,
+::ng-deep .tweet-input .mat-mdc-input-element {
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+::ng-deep .tweet-input .mat-mdc-form-field-infix {
+  background: #000 !important;
+}
+
+::ng-deep .tweet-input input {
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}

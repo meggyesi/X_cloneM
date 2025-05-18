@@ -1,0 +1,20 @@
+.tweet-form {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  
+  form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .tweet-input {
+    flex: 1;
+  }
+
+  .tweet-button {
+    margin-left: 10px;
+    height: 36px;
+  }
+}

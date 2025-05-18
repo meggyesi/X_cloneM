@@ -1,0 +1,16 @@
+<!-- send-tweet.component.html -->
+<div class="tweet-form">
+  <form (ngSubmit)="sendTweet()">
+    <div class="tweet-form-row">
+      <div class="tweet-avatar">
+        <mat-icon>account_circle</mat-icon>
+      </div>
+      <mat-form-field appearance="fill" class="tweet-input">
+        <mat-label>What’s happening?</mat-label>
+        <input matInput [(ngModel)]="tweetText" name="tweetText">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="black" type="submit" class="tweet-button">Post</button>
+  </form>
+</div>
+

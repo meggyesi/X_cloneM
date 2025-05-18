@@ -1,0 +1,52 @@
+<mat-card class="tweet-card" *ngIf="tweet">
+  <mat-card-header>
+    <div></div>
+    <div class="tweet-header-flex">
+      <div class="tweet-header-main">
+        <div></div>
+        <div class="tweet-avatar">
+          <mat-icon>account_circle</mat-icon>
+        </div>
+        <div class="username-follow-container">
+          <mat-card-title>{{ tweet.username }}</mat-card-title>
+          <button mat-stroked-button class="follow-button" (click)="followUser(tweet.userId ? tweet.userId : ''); $event.stopPropagation()">
+            {{ isFollowed ? 'Following' : 'Follow' }}
+          </button>
+        </div>
+      </div>
+      <mat-icon [matMenuTriggerFor]="menu" class="tweet-menu">more_vert</mat-icon>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="openDeleteConfirmDialog()">
+        <mat-icon>delete</mat-icon>
+        Delete
+      </button>
+      <button mat-menu-item (click)="openEditDialog()" *ngIf="isOwner">
+        <mat-icon>edit</mat-icon>
+        Edit
+      </button>
+    </mat-menu>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ tweet.text }}</p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button (click)="likeTweet()" [color]="isLiked ? 'warn' : 'primary'">
+      <mat-icon [ngClass]="{'liked-icon': isLiked}">favorite</mat-icon> {{ tweet.likeCount }}
+    </button>
+    <button mat-button (click)="showComments()" [color]="isLiked ? 'warn' : 'primary'">
+      <mat-icon>comment</mat-icon> {{ tweet.commentCount }}
+    </button>
+    <button mat-button (click)="commentOnTweet()">
+      <mat-icon>comment</mat-icon> Comment
+    </button>
+  </mat-card-actions>
+</mat-card>
+<div class="comments-section" *ngIf="isCommentsVisible">
+  <div class="comments-list">
+    <app-comment-card *ngFor="let comment of comments" [comment]="comment"></app-comment-card>
+  </div>
+  <div class="hide-comments-btn">
+    <button mat-stroked-button color="warn" (click)="showComments()">Hide</button>
+  </div>
+</div>

@@ -1,0 +1,146 @@
+/* feed.component.css */
+.twitter-dashboard {
+  width: 600px;
+  margin: auto;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+.div{
+  background: #000 !important;
+}
+
+.tweet-input-card {
+  margin-bottom: 20px;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+.tweet-input-field {
+  width: 100%;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+.tweet-button {
+  float: right;
+  background: #111 !important;
+  color: #e6e6e6 !important;
+}
+
+.tweet-feed {
+  margin-bottom: 10px;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+.tweet-card {
+  border: 1px solid #222;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+.feed-box {
+  width: 100%;
+  max-width: 600px;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+.feed-tweet {
+  width: 100%;
+  display: block;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+.feed-tweet > tweet-card,
+.feed-tweet > send-tweet {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+side-card {
+  margin-top: 25px;
+  margin-right: 50px;
+  min-height: 400px;
+  max-height: 500px;
+  height: auto;
+  width: 30%;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+send-tweet{
+  width: 70%;
+}
+
+.feed-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+app-menubar {
+  flex: 0 0 260px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.feed-main-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 0 0;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+}
+
+mat-drawer-container, mat-drawer, mat-drawer-content {
+  background: #000 !important;
+}
+
+.mat-drawer-inner-container {
+  background: #000 !important;
+}
+.feed-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  .content {
+    padding: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    
+    h1 {
+      margin-bottom: 16px;
+    }
+    
+    .tweets-list {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      
+      .no-tweets {
+        text-align: center;
+        padding: 32px;
+        color: #657786;
+        font-style: italic;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body, app-root, #root, .main-content, .content, .mat-drawer-content, .mat-sidenav-content {
+  height: 100%;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+  margin: 0;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body, input, textarea, select, button {
+  background: #000 !important;
+  color: #e6e6e6 !important;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mat-drawer-inner-container {
+  background: #000 !important;
+}

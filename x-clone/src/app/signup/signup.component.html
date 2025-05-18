@@ -1,0 +1,59 @@
+<div class="bg">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+        <div class="text-center">
+            <mat-card class="box">
+                <mat-card-header>
+                    <mat-card-title>Sign up for X Clone</mat-card-title>
+                </mat-card-header>
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="example-form">
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="email">Email</mat-label>
+                        <input matInput type="text" formControlName="email" [ngClass]="{'invalid-input': signupForm.get('email')?.errors}" />
+                    </mat-form-field>
+                    <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+                        <p class="error-message" *ngIf="signupForm.get('email')?.errors && signupForm.get('email')?.errors!['required']">Email is required.</p>
+                        <p class="error-message" *ngIf="signupForm.get('email')?.errors && signupForm.get('email')?.errors!['email']">Please enter a valid email.</p>
+                    </div>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="username">Username</mat-label>
+                        <input matInput type="text" formControlName="nickname" />
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="password">Password</mat-label>
+                        <input matInput type="password" formControlName="password" [ngClass]="{'invalid-input': signupForm.get('password')?.errors}" />
+                    </mat-form-field>
+                    <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+                        <p class="error-message" *ngIf="signupForm.get('password')?.errors && signupForm.get('password')?.errors!['required']">Password is required.</p>
+                        <p class="error-message" *ngIf="signupForm.get('password')?.errors && signupForm.get('password')?.errors!['minlength']">Password must be at least 6 characters.</p>
+                    </div>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label for="confirmPassword">Re-Password</mat-label>
+                        <input matInput type="password" formControlName="confirmPassword" [ngClass]="{'invalid-input': signupForm.get('confirmPassword')?.errors}" />
+                    </mat-form-field>
+                    <div *ngIf="signupForm.get('confirmPassword')?.invalid && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched)">
+                        <p class="error-message" *ngIf="signupForm.get('confirmPassword')?.errors && signupForm.get('confirmPassword')?.errors!['required']">Confirming password is required.</p>
+                        <p class="error-message" *ngIf="signupForm.get('confirmPassword')?.errors && signupForm.get('confirmPassword')?.errors!['mustMatch']">Passwords must match.</p>
+                    </div>
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="birth">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <div class="btn-click">
+                        <button mat-raised-button color="primary" type="submit">Register</button>
+                        <button mat-raised-button (click)="goBack()">Back</button>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+
+

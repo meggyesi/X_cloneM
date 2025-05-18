@@ -1,0 +1,21 @@
+<mat-drawer-container autosize>
+    <mat-drawer #drawer opened="true" mode="side" position="start">
+        <app-menubar></app-menubar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="text-align: center;min-height: 800px;">
+            <div class="feed-box">
+                <div class="feed-tweet">
+                    <send-tweet (tweetCreated)="handleTweetCreation($event)"></send-tweet>
+                    <div class="tweet-container" *ngFor="let tweet of tweetList">
+                        <tweet-card [tweet]="tweet" (tweetDeleted)="handleTweetDeleted($event)" (tweetUpdated)="handleTweetUpdated($event)"></tweet-card>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+  

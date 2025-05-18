@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>Add a Comment</h2>
+<mat-dialog-content>
+  <send-comment [parentId]="data.tweetId" (postComment)="onCommentAdded($event)"></send-comment>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Cancel</button>
+</mat-dialog-actions>

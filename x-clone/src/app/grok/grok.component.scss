@@ -1,0 +1,117 @@
+.grok-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #111;
+  padding: 16px;
+}
+
+.grok-logo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.grok-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.grok-title {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.grok-input-row {
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-radius: 24px;
+  padding: 8px 16px;
+  width: 600px;
+  max-width: 90vw;
+  margin-bottom: 20px;
+  
+  input {
+    background-color: #000 !important;
+    color: #fff !important;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    
+    &:focus {
+      outline: none;
+    }
+    
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+}
+
+.grok-input {
+  flex: 1;
+  margin-right: 8px;
+}
+
+// Style Angular Material components
+::ng-deep {
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+  
+  .mat-mdc-text-field-wrapper {
+    background-color: transparent !important;
+  }
+  
+  .mat-mdc-form-field-flex {
+    background-color: transparent !important;
+  }
+  
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent !important;
+  }
+  
+  .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: transparent !important;
+  }
+  
+  // Make the text input black
+  .mat-mdc-input-element {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-radius: 4px !important;
+    padding: 8px !important;
+  }
+}
+
+button[mat-icon-button] {
+  background: #000;
+  color: #fff;
+}
+
+button[mat-stroked-button] {
+  color: #fff;
+  border-color: #444;
+  background: #222;
+}
+
+.grok-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.grok-response {
+  margin-top: 30px;
+  color: #ddd;
+  text-align: left;
+  max-width: 600px;
+}

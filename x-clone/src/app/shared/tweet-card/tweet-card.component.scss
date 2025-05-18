@@ -1,0 +1,164 @@
+.tweet-card {
+  width: 80%;
+  min-height: 150px;
+  margin: 20px auto 16px;
+  border: 2px solid #222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background: #000 !important;
+  color: #e6e6e6 !important;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+  
+  &:hover {
+    border: 1px solid #333;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+mat-card-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  color: #e6e6e6 !important;
+  padding-left: 0 !important;
+}
+
+mat-card-title {
+  margin-bottom: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.mat-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e6e6e6 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.2 !important;
+}
+
+mat-card-content {
+  font-size: large;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  padding: 15px;
+  color: #e6e6e6 !important;
+}
+
+.mat-card-content p {
+  font-size: large;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  padding: 15px;
+  color: #e6e6e6 !important;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  color: #e6e6e6 !important;
+}
+
+.tweet-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.tweet-header-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tweet-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  mat-icon {
+    font-size: 48px;
+    color: #e3e3e3;
+    background: #111 !important;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.tweet-menu {
+  cursor: pointer;
+}
+
+// Follow button styles
+.username-follow-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.follow-button {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 20px !important;
+  min-width: 80px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  padding: 0 15px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.3px !important;
+  transition: background-color 0.2s, color 0.2s !important;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  &.following {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+.comments-section {
+  margin-top: 8px;
+  margin-left: 48px;
+  border-left: 2px solid #333;
+  padding-left: 16px;
+  background: #000;
+  padding-bottom: 16px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  .tweet-card {
+    margin: 0;
+    background: #111 !important;
+    border: 1px solid #222;
+  }
+}
+
+.hide-comments-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  
+  button {
+    background: #111 !important;
+    color: #f5f5f5 !important;
+    border: 1px solid #333 !important;
+  }
+}
+
+.liked-icon {
+  color: #ff1744 !important;
+  transition: color 0.2s;
+}

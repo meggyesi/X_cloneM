@@ -1,0 +1,25 @@
+<mat-drawer-container autosize>
+  <mat-drawer #drawer opened="true" mode="side" position="start">
+    <app-menubar></app-menubar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="grok-container">
+      <div class="grok-logo-title">
+
+        <span class="grok-title">Grok</span>
+      </div>
+      <div class="grok-input-row">
+        <mat-form-field class="grok-input" appearance="fill">
+          <input matInput placeholder="Ask anything" [(ngModel)]="question" (keyup.enter)="sendQuestion()" />
+        </mat-form-field>
+        <button mat-icon-button color="primary" (click)="sendQuestion()">
+          <mat-icon>arrow_upward</mat-icon>
+        </button>
+      </div>
+      <div class="grok-response" *ngIf="response">
+        <h3>Answer:</h3>
+        <p>{{ response }}</p>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

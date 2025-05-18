@@ -1,0 +1,75 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #000 !important;
+    color: #e6e6e6 !important;
+    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 10px;
+    background: #000 !important;
+    color: #e6e6e6 !important;
+    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    outline: none;
+    background: #000 !important;
+    color: #e6e6e6 !important;
+    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.login-form .buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.login-form button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #111 !important;
+    width: 100%;
+    color: #e6e6e6 !important;
+    padding: 10px;
+    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.login-form button:hover {
+    background-color: #222 !important;
+}
+
+.login-form button[type="button"] {
+    background-color: #222 !important;
+}
+
+.login-form button[type="button"]:hover {
+    background-color: #333 !important;
+}
+
+.overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111a;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}

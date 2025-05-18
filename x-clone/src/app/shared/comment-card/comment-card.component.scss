@@ -1,0 +1,57 @@
+/* tweet-card.component.css */
+.tweet-card {
+  width: 500px;
+  min-height: 150px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.tweet-card:hover {
+  border: 1px solid #000000;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mat-card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mat-card-content p {
+  font-size: large;
+  font-family: auto;
+  display: block;
+  padding: 15px;
+}
+
+mat-card-header{
+  justify-content: space-between;
+}
+
+mat-card-content{
+  font-size: large;
+  font-family: auto;
+  display: block;
+  padding: 15px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.comment-dark-card {
+  background: #111 !important;
+  color: #f5f5f5 !important;
+  border: 1px solid #222 !important;
+}
+
+.comment-dark-card .mat-card-title {
+  color: #f5f5f5 !important;
+}
+
+.comment-dark-card .mat-card-content p {
+  color: #f5f5f5 !important;
+}

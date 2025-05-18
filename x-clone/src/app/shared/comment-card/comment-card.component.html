@@ -1,0 +1,8 @@
+<mat-card class="tweet-card comment-dark-card" *ngIf="comment">
+  <mat-card-header>
+    <mat-card-title>{{ comment.username }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ comment.text }}</p>
+  </mat-card-content>
+</mat-card>
