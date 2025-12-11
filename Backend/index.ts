@@ -17,7 +17,7 @@ import chatRouter from './routes/chatRoute';
 
 const app = express();
 const port = 5001;
-const dbUrl = 'mongodb://localhost:5000/x_clone';
+const dbUrl = process.env.MONGODB_URL || 'mongodb://mongodb:27017/x_clone';
 dotenv.config();
 
 const corsOptions = {
@@ -69,5 +69,6 @@ mongoose.connect(dbUrl).then((_) => {
 app.listen(port, () => {
     console.log('Server is listening on port ' + port.toString());
 });
+
 
 console.log('After server is ready.');
