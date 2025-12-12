@@ -21,7 +21,7 @@ const dbUrl = process.env.MONGODB_URL || 'mongodb://mongodb:27017/x_clone';
 dotenv.config();
 
 const corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: ['http://localhost:4200', 'http://localhost'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -72,3 +72,4 @@ app.listen(port, () => {
 
 
 console.log('After server is ready.');
+
