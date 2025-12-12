@@ -7,7 +7,7 @@ import { catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:5001/auth';
+  private apiUrl = '/auth';
 
   constructor(private http: HttpClient) { }
 
@@ -79,4 +79,5 @@ export class AuthService {
     
     return throwError(() => new Error(errorMessage));
   }
+
 }
